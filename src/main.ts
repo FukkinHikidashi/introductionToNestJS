@@ -6,6 +6,7 @@ async function bootstrap() {
   await app.listen(3000);
   console.log('hoge');
   console.log('fuga');
+  console.log('pika');
   console.log('foo');
 }
 bootstrap();
