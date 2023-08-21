@@ -3,17 +3,18 @@ name: Lint
 on: [push]
 
 jobs:
-  eslint:
+  lint:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v1
+
+      - name: yarn install
+        uses: nuxt/actions-yarn@node-11
         with:
-          node-version: 16
-      - run: yarn install # or yarn install
-      - uses: sibiraj-s/action-eslint@v3
+          args: "install"
+
+      - name: yarn lint
+        uses: nuxt/actions-yarn@node-11
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # optional
-          eslint-args: '--ignore-path=.gitignore --quiet'
-          extensions: 'js,jsx,ts,tsx'
-          annotations: true
+          args: "lint"
