@@ -6,5 +6,6 @@ async function bootstrap() {
   await app.listen(3000);
   console.log('aaa');
   console.log('bbb');
+  console.log('ccc');
 }
 bootstrap();
