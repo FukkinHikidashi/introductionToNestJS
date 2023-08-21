@@ -1,18 +1,6 @@
 name: Lint
 
-on:
-  pull_request:
-    branches:
-      - develop
-      - staging
-      - pre-production
-      - production
-  push:
-    branches:
-      - develop
-      - staging
-      - pre-production
-      - production
+on: [push]
 
 jobs:
   eslint:
