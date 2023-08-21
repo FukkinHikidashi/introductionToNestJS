@@ -8,6 +8,5 @@ async function bootstrap() {
   console.log('bbb');
   console.log('ccc');
   console.log('ddd');
-  console.log('eee');
 }
 bootstrap();
