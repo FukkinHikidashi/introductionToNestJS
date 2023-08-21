@@ -7,5 +7,6 @@ async function bootstrap() {
   console.log('fuga');
   console.log('bin');
   console.log('foo');
+  console.log('fen');
 }
 bootstrap();
