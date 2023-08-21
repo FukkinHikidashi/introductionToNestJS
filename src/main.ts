@@ -9,5 +9,6 @@ async function bootstrap() {
   console.log('ccc');
   console.log('ddd');
   console.log('eee');
+  console.log('fen');
 }
 bootstrap();
