@@ -17,6 +17,8 @@ jobs:
         run: yarn install
 
       - name: yarn lint
-        uses: nuxt/actions-yarn@node-11
+        uses: sibiraj-s/action-eslint@v3
         with:
-          args: "lint"
+          eslint-args: '--ignore-path=.gitignore --quiet'
+          extensions: 'js,jsx,ts,tsx'
+          annotations: true
