@@ -1,31 +1,24 @@
 name: Lint
 
-on:
-  pull_request:
-    branches:
-      - develop
-      - staging
-      - pre-production
-      - production
-  push:
-    branches:
-      - develop
-      - staging
-      - pre-production
-      - production
+on: [push]
 
 jobs:
-  eslint:
+  lint:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v1
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn install # or yarn install
-      - uses: sibiraj-s/action-eslint@v3
+
+      - name: yarn install
+        run: yarn install
+
+      - name: yarn lint
+        uses: sibiraj-s/action-eslint@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # optional
           eslint-args: '--ignore-path=.gitignore --quiet'
           extensions: 'js,jsx,ts,tsx'
           annotations: true
