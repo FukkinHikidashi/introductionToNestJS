@@ -2,6 +2,11 @@ name: Lint
 
 on:
   pull_request:
+    branches:
+      - develop
+      - staging
+      - pre-production
+      - production
   push:
     branches:
       - develop
@@ -17,7 +22,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci # or yarn install
+      - run: yarn install # or yarn install
       - uses: sibiraj-s/action-eslint@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # optional
