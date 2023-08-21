@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: yarn install
-        uses: nuxt/actions-yarn@node-11
+        uses: actions/setup-node@v3
         with:
-          args: "install"
+          node-version: 16
 
       - name: yarn lint
         uses: nuxt/actions-yarn@node-11
