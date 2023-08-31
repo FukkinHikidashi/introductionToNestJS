@@ -1,0 +1,15 @@
+name: echo_variables
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: test
+        entrypoint: 'bash'
+        args:
+          - -c
+          - |
+            echo ${BRANCH_NAME}
