@@ -3,7 +3,7 @@ name: echo_variables
 on: [push]
 
 jobs:
-  echo_variables:
+  lint2:
     runs-on: ubuntu-latest
 
     steps:
