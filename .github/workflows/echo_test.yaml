@@ -8,5 +8,4 @@ jobs:
 
     steps:
       - id: test
-        entrypoint: 'bash'
         run: echo ${BRANCH_NAME}
