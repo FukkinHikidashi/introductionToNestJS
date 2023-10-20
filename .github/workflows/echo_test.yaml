@@ -1,0 +1,11 @@
+name: echo_variables
+
+on: [push]
+
+jobs:
+  lint2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: test
+        run: echo ${BRANCH_NAME}
