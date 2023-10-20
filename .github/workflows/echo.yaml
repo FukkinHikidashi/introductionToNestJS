@@ -5,7 +5,7 @@ on:
 
 jobs:
   sample_job:
-    runs-on: ubuntsu-latest
+    runs-on: ubuntu-latest
     steps:
       - id: 'echo_test'
         name: 'echo test'
