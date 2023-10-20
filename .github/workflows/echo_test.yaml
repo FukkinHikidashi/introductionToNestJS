@@ -9,7 +9,4 @@ jobs:
     steps:
       - id: test
         entrypoint: 'bash'
-        args:
-          - -c
-          - |
-            echo ${BRANCH_NAME}
+        run: echo ${BRANCH_NAME}
