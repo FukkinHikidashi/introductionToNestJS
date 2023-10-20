@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   lint2:
-    runs-on: ubuntsu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - id: test
