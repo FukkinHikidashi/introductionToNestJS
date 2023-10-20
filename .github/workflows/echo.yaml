@@ -15,4 +15,4 @@ jobs:
         run: VAL="VAL_TEST" && echo $VAL
       - id: get_branch_name
         name: get branch name
-        run: VAL={BRANCH_NAME} && echo $VAL
+        run: VAL=${BRANCH_NAME} && echo $VAL
